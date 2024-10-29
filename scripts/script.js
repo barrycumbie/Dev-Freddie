@@ -39,3 +39,13 @@ let gamesList = [
     {gameName: "Cow Game",gameURL: "https://sblakeuna.github.io/literate-octo-disco-david/",gameAuthor: "Spencer Blake"},
     {gameName: "Find the Surprise!", gameURL: "https://tuesdayannb.github.io/miniature-enigma-david/", gameAuthor: "Tuesday Brown"}
 ];
+
+for (j = 0; j < gamesList.length; j++){
+  
+    //for each value in a game...
+    $.each(gamesList[j], (key, val)=>{
+      $('body').append("<br>" + "key: " + key + ", value: " + val); 
+      //pritn out whats in each obj 
+    })
+    
+  };
