@@ -7,7 +7,7 @@
               <a class="btn btn-danger" href="https://germannnick.github.io/Spirit-Animal/" target="_blank">Spirit Animal</a>
           </div> 
         </div>
-        <div class="container-fluid col-md-4 bg-danger">
+        <div class="container-fluid col-md-3">
           <div class="card">
             <h1>Project David</h1>
             <h3>David and Goliath Game</h3>
@@ -15,7 +15,14 @@
               <a class="btn btn-danger" href="https://germannnick.github.io/Dev-David-Goliath/" target="_blank">David and Goliath Game</a>
           </div> 
         </div>
-        <div class="container-fluid col-md-4 bg-danger">
+        <div class="container-fluid col-md-3">
+          <div class="card">
+            <h1>Unfinished Website</h1>
+            <h3>Partially Built Store Ecomerce Store Front</h3>
+            <img src="/project_edward/images/pmt_website.jpg" alt="PMT Website" style="width:100%; padding-top: 25px;"  class="rounded">
+              <a class="btn btn-danger" href="https://www.premarktech.biz/" target="_blank">PMT Website</a>
+          </div> 
+<div class="container-fluid col-md-3">
           <div class="card">
             <h1>Unfinished Website</h1>
             <h3>Partially Built Store Ecomerce Store Front</h3>

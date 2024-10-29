@@ -1,0 +1,124 @@
+/* Basic CSS for card styles */
+/* Halloween themed colors and font */
+
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+body {
+    font-family: "Metal Mania", system-ui;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(128, 0, 128, 1) 100%);
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: "Metal Mania", system-ui;
+}
+.header {
+    background-color: #000;
+    color: #ff6600;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.main-content {
+    padding: 20px;
+    color: #fff;
+}
+.sidebar {
+    background-color: #222;
+    color: #ff6600;
+    padding: 15px;
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar a {
+    color: #ff6600;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+    color: #fff;
+}
+
+.content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: #333 !important; /* Override background color */
+    border-bottom: 2px solid #ff6600 !important; /* Add custom border */
+}
+
+.navbar .navbar-brand {
+    color: #fff !important; /* Override brand color */
+    font-size: 1.5em !important; /* Override brand font size */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #ff6600 !important; /* Override link color */
+    font-weight: bold !important; /* Override link font weight */
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #fff !important; /* Override link hover color */
+    background-color: #ff6600 !important; /* Override link hover background */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    max-width: 300px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+}
+
+.card-description {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
