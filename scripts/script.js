@@ -41,11 +41,5 @@ let gamesList = [
 ];
 
 for (j = 0; j < gamesList.length; j++){
-  
-    //for each value in a game...
-    $.each(gamesList[j], (key, val)=>{
-      $('body').append("<br>" + "key: " + key + ", value: " + val); 
-      //pritn out whats in each obj 
-    })
-    
+      $('body').append( gamesList[j].gameName + " " + gamesList[j].gameURL + " by " + gamesList[j].gameAuthor + "<br>"); 
   };
