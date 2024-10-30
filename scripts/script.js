@@ -41,5 +41,6 @@ let gamesList = [
 ];
 
 for (j = 0; j < gamesList.length; j++){
-      $('body').append("<div class=\"card\"><h4>" + gamesList[j].gameName + "</h4> <br>" + gamesList[j].gameURL + " by " + gamesList[j].gameAuthor + "</div>"); 
+      $('#gameCards').append("<div class='col-md-3'><div class='card'><h4> <a target='_blank' href='" + 
+        gamesList[j].gameURL + "'>" + gamesList[j].gameName + "</a></h4> by " + gamesList[j].gameAuthor + "</div></div>"); 
   };
