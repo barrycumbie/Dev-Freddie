@@ -1,127 +1,132 @@
-/* Basic CSS for card styles */
-/* Halloween themed colors and font */
-
 @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+
 body {
     font-family: "Metal Mania", system-ui;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(128, 0, 128, 1) 100%);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(64,0,128,1) 100%);
     margin: 0;
     padding: 0;
-}
-
-* {
-    font-family: "Metal Mania", system-ui;
-}
-.header {
-    background-color: #000;
-    color: #ff6600;
-    padding: 20px;
-    text-align: center;
-    font-size: 2em;
-}
-
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-.main-content {
-    padding: 20px;
-    color: #fff;
-}
-.sidebar {
-    background-color: #222;
-    color: #ff6600;
-    padding: 15px;
-    width: 250px;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-}
-
-.sidebar a {
-    color: #ff6600;
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-}
-
-.sidebar a:hover {
-    background-color: #575757;
-    color: #fff;
-}
-
-.content {
-    margin-left: 270px;
-    padding: 20px;
+    animation: floatingBats 20s linear infinite;
+    color: #ffcc66;
 }
 
 .navbar {
-    background-color: #333 !important; /* Override background color */
-    border-bottom: 2px solid #ff6600 !important; /* Add custom border */
+    background: linear-gradient(270deg, #4b0082, #ff4500, #4b0082);
+    background-size: 600% 600%;
+    animation: navbarGradient 10s ease infinite;
+    border-bottom: 3px solid #ff6600;
+}
+
+@keyframes navbarGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .navbar .navbar-brand {
-    color: #fff !important; /* Override brand color */
-    font-size: 1.5em !important; /* Override brand font size */
+    color: #ffcc66 !important;
+    font-size: 1.8em;
+}
+
+.navbar .navbar-toggler-icon {
+    background-color: #ff6600;
 }
 
 .navbar .navbar-nav .nav-link {
-    color: #ff6600 !important; /* Override link color */
-    font-weight: bold !important; /* Override link font weight */
+    color: #ffcc66 !important;
+    font-weight: bold !important;
 }
 
 .navbar .navbar-nav .nav-link:hover {
-    color: #fff !important; /* Override link hover color */
-    background-color: #ff6600 !important; /* Override link hover background */
+    color: #ffffff !important;
+    background-color: #ff6600 !important;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
+h1, h2 {
+    color: #ffcc66;
+    text-align: center;
+    text-shadow: 0px 0px 10px #ff6600, 0px 0px 20px #ff6600;
 }
 
 .card {
-    background-color: #fff;
+    background-color: #333333;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 102, 0, 0.5);
     margin: 20px;
     max-width: 300px;
     overflow: hidden;
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
+    color: #ffffff;
+    position: relative;
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 8px 20px rgba(255, 102, 0, 0.7), 0 0 15px rgba(255, 102, 0, 0.7);
+    animation: pulseGlow 1s infinite alternate;
 }
 
-.card img {
-    width: 100%;
-    height: auto;
+@keyframes pulseGlow {
+    from { box-shadow: 0 8px 20px rgba(255, 102, 0, 0.7), 0 0 15px rgba(255, 102, 0, 0.7); }
+    to { box-shadow: 0 8px 25px rgba(255, 102, 0, 0.9), 0 0 20px rgba(255, 102, 0, 0.9); }
 }
 
-.card-content {
+.card h4 a {
+    color: #ff6600;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+
+.card h4 a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ff6600;
+}
+
+.card p {
+    color: #cccccc;
+    font-size: 0.9em;
+}
+
+.footer {
+    background-color: #222;
+    color: #ffcc66;
     padding: 15px;
+    font-size: 0.85em;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.7);
 }
 
-.card-title {
-    font-size: 1.5em;
-    margin: 0 0 10px;
+.footer .nav-link {
+    color: #ffcc66;
+    text-decoration: none;
+    position: relative;
 }
 
-.card-description {
-    color: #666;
-    font-size: 1em;
-    line-height: 1.5;
+.footer .nav-link::before {
+    content: "🎃";
+    margin-right: 8px;
+    font-size: 1.2em;
+    color: #ff6600;
+    animation: iconGlow 1s ease-in-out infinite alternate;
 }
 
-.whiteText {
-    color:#fff;
+.footer .nav-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ff6600;
+}
+
+.footer p {
+    color: #ffcc66;
+    text-shadow: 0 0 5px #ff6600;
+}
+
+@keyframes iconGlow {
+    from { text-shadow: 0 0 10px rgba(255, 102, 0, 0.5); }
+    to { text-shadow: 0 0 15px rgba(255, 102, 0, 1); }
+}
+
+/* Background Animation */
+@keyframes floatingBats {
+    0% { background-position: 0 0; }
+    100% { background-position: 100vw 100vh; }
 }
